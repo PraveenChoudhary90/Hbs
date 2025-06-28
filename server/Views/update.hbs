@@ -23,6 +23,7 @@
             <th>City</th>
             <th>Fees</th>
             <th>Delete</th>
+            <th>Update</th>
         </tr>
 
         {{#each mydata }}
@@ -35,6 +36,7 @@
                 <td>
                     <a href="/Product/delete?id={{this.id}}">Delete</a>
                     </td>
+                    <td><a href="/Product/edit?id={{this.id}}">Update</a></td>
             </tr>
         {{/each }}
     </table>

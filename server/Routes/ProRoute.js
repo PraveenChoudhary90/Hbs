@@ -10,6 +10,7 @@ route.post("/save", ProController.RegistractionUser);
 route.get("/update",ProController.UpdateData)
 route.get("/delete",ProController.DeleteData)
 route.get("/search",ProController.SearchData)
+route.get("/edit", ProController.EditData);
 
 
 

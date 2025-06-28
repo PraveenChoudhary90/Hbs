@@ -60,6 +60,11 @@ const UpdateData = async(req,res)=>{
 }
 
 
+const EditData = async(req,res)=>{
+    console.log(req.query);
+    res.render("edit");
+}
+
 
 module.exports={
     Homepage,
@@ -69,5 +74,6 @@ module.exports={
     RegistractionUser,
     DeleteData,
     SearchData,
-    UpdateData
+    UpdateData,
+    EditData
 }
