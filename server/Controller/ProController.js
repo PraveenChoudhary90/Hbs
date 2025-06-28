@@ -38,8 +38,15 @@ const Displaypage = async(req,res)=>{
 }
 
 const DeleteData = async(req,res)=>{
-    console.log(req.query);
-    res.render("update");
+    const {id}=req.query;
+    await students.destroy({
+        where: {
+          id: id,
+        },
+      });
+      const data = await students.findAll();
+      console.log(data);
+    res.render("update", {mydata:data});
 }
 
 const SearchData = async(req,res)=>{
@@ -48,8 +55,6 @@ const SearchData = async(req,res)=>{
 
 const UpdateData = async(req,res)=>{
     const data = await students.findAll();
-    // const mydata = data.map(s => s.toJSON());
-    // console.log('Student Records:', data.map(s => s.toJSON()));
     console.log(data);
     res.render("update", {mydata:data});
 }
