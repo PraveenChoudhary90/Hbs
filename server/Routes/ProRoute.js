@@ -7,6 +7,9 @@ route.get("/about", ProController.Aboutpage);
 route.get("/insert", ProController.Insertpage);
 route.get("/display", ProController.Displaypage);
 route.post("/save", ProController.RegistractionUser);
+route.get("/update",ProController.UpdateData)
+route.get("/delete",ProController.DeleteData)
+route.get("/search",ProController.SearchData)
 
 
 

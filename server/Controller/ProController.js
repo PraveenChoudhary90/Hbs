@@ -37,6 +37,22 @@ const Displaypage = async(req,res)=>{
     res.render("display", {mydata:data});
 }
 
+const DeleteData = async(req,res)=>{
+    console.log(req.query);
+    res.render("update");
+}
+
+const SearchData = async(req,res)=>{
+    res.render("search")
+}
+
+const UpdateData = async(req,res)=>{
+    const data = await students.findAll();
+    // const mydata = data.map(s => s.toJSON());
+    // console.log('Student Records:', data.map(s => s.toJSON()));
+    console.log(data);
+    res.render("update", {mydata:data});
+}
 
 
 
@@ -45,5 +61,8 @@ module.exports={
     Insertpage,
     Displaypage,
     Aboutpage,
-    RegistractionUser
+    RegistractionUser,
+    DeleteData,
+    SearchData,
+    UpdateData
 }
